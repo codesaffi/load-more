@@ -50,9 +50,13 @@ IT WILL USE THE USE STATE VARIABLE TO CHANGES THE NUMBER OF VALUES
 
 
 
+
+
   const loadMoreItems = () => {
     setVisibleItems(prevVisibleItems => prevVisibleItems + 4); // Increase visible items by 4
   };
+
+  
 
 
 
@@ -75,10 +79,15 @@ div className="app-container"
         button className="load-more-btn" onClick={loadMoreItems}>Load More button
       )}
     div
+
+    
     
 
 
 initialData.slice(0, visibleItems):
+
+
+
  This expression slices the initialData array to display only the first visibleItems number of items. Initially, visibleItems is set to 4.
  
 
@@ -90,6 +99,8 @@ initialData.slice(0, visibleItems):
             p{item.description}p
           div
         div)):
+
+        
 
 
  Maps over the sliced array (initialData.slice(0, visibleItems)) and renders an element for each item. Each item is rendered with its name as the content and key attribute set to item.id for React's internal reconciliation.
